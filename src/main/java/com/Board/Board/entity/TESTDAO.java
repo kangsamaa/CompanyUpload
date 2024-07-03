@@ -1,5 +1,6 @@
 package com.Board.Board.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -14,6 +15,5 @@ public class TESTDAO {
 
     @Id
     private int user_id;
-
     private String user_name;
 }
