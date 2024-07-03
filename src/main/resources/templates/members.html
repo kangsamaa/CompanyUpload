@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en" xmlns:th="http://www.thymeleaf.org">
+        <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+    <style>
+        table {
+            font-family: arial, sans-rif;
+            border-collapse: collapse;
+            width: 100%;
+
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<table>
+
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="lists : ${list}">
+        <td><span th:text="${lists.user_id}"></span></td>
+        <td><span th:text="${lists.user_name}"></span></td>
+    </tr>
+    </tbody>
+
+</table>
+    <a href="/register">memberinsert</a>
+</body>
+
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
