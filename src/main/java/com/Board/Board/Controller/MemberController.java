@@ -37,5 +37,4 @@ public class MemberController {
         memberService.register(testdao);
         return "redirect:/";
     }
-
 }
