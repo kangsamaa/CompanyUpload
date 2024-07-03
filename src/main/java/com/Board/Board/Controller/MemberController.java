@@ -3,14 +3,13 @@ package com.Board.Board.Controller;
 import com.Board.Board.DTO.MemberDTO;
 import com.Board.Board.Service.MemberService;
 import com.Board.Board.entity.TESTDAO;
+import com.Board.Board.entity.User;
 import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -36,6 +35,7 @@ public class MemberController {
     public String registerPost(TESTDAO testdao){
 
         memberService.register(testdao);
-        return "redirect:/members";
+        return "redirect:/";
     }
+
 }
