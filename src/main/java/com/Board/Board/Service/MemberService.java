@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -44,10 +45,11 @@ public class MemberService {
     }
 
     public void join(JoinMemberDTO joinMemberDTO){
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         User user = User.builder()
                 .userEmail(joinMemberDTO.getUserEmail())
                 .userName(joinMemberDTO.getUserName())
-                .userPassword(joinMemberDTO.getUserPassword())
+                .userPassword(passwordEncoder.encode(joinMemberDTO.getUserPassword()))
                 .build();
 
         joinRepository.save(user);
