@@ -10,8 +10,8 @@ public class MemberDTO {
 
     @Id
     @Column(unique = true)
-    private String user_id;
+    private String Userid;
 
     @NotBlank(message = "Not blank")
-    private String user_name;
+    private String Username;
 }

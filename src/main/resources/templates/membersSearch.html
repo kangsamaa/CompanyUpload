@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="search_list">
+    <table id="table" class="table table-horizontal">
+        <thead id="thead">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#searchList}}
+        <tr>
+            <td>{{user_id}}</td>
+            <td>{{user_name}}</td>
+        </tr>
+        {{/searchList}}
+        </tbody>
+    </table>
+</div>
+
+<div class="main">
+    <form action="/membersSearch" method="GET" role="search">
+        <input name="user_id" type="text" placeholder="Search">
+        <textarea name="user_name"></textarea>
+        <button type="submit">search</button>
+    </form>
+
+    <p></p>
+    <p></p>
+</div>
+</body>
+</html>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title><!DOCTYPE html>
@@ -43,13 +43,17 @@
 
     <tbody>
     <tr th:each="lists : ${list}">
-        <td><span th:text="${lists.user_id}"></span></td>
-        <td><span th:text="${lists.user_name}"></span></td>
+        <td><span th:text="${lists.userid}"></span></td>
+        <td><span th:text="${lists.username}"></span></td>
     </tr>
     </tbody>
 
 </table>
     <a href="/register">memberinsert</a>
+<p>
+    <a href="/membersSearch">membersSearch</a>
+</p>
+
 </body>
 
 </html></title>

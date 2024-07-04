@@ -14,6 +14,6 @@ import lombok.NoArgsConstructor;
 public class TESTDAO {
 
     @Id
-    private int user_id;
-    private String user_name;
+    private int Userid;
+    private String Username;
 }

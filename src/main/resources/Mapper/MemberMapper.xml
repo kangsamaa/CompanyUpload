@@ -3,10 +3,10 @@
 
 <mapper namespace="com.Board.Board.Mapper.MemberMapper">
     <select id="selectUser" resultType="com.Board.Board.DTO.MemberDTO">
-        SELECT * FROM TESTDAO ORDER BY user_id DESC
+        SELECT * FROM TESTDAO ORDER BY Userid DESC
     </select>
 
     <insert id="save" parameterType="com.Board.Board.Mapper.MemberMapper">
-        insert into TESTDAO VALUES(#{user_id},#{user_name})
+        insert into TESTDAO VALUES(#{Userid},#{Username})
     </insert>
 </mapper>

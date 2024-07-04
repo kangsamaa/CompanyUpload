@@ -37,7 +37,7 @@ public class MemberService {
 
     public void register(TESTDAO testdao){
         log.info("====START====");
-        if(memberRepository.findById(testdao.getUser_id()).isPresent()){
+        if(memberRepository.findById(testdao.getUserid()).isPresent()){
             throw new IllegalArgumentException(("Email is tup"));
         }else{
             memberRepository.save(testdao);

@@ -37,4 +37,7 @@ public class MemberController {
         memberService.register(testdao);
         return "redirect:/";
     }
+
+    @GetMapping("membersSearch")
+    public String membersSearchGet(){return "membersSearch";}
 }

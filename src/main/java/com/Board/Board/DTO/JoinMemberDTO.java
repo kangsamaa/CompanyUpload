@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class JoinMemberDTO {
 
-    private String userName;
-    private String userPassword;
-    private String userEmail;
+    private String UserName;
+    private String UserPassword;
+    private String UserEmail;
 
 }
