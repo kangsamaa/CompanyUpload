@@ -1,12 +1,6 @@
 package com.Board.Board.Service;
 
-import com.Board.Board.DTO.JoinMemberDTO;
-import com.Board.Board.DTO.MemberDTO;
 import com.Board.Board.Mapper.MemberMapper;
-import com.Board.Board.Repository.JoinRepository;
-import com.Board.Board.Repository.MemberRepository;
-import com.Board.Board.entity.TESTDAO;
-import com.Board.Board.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
