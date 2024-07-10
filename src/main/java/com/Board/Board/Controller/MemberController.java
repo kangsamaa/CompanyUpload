@@ -21,7 +21,7 @@ public class MemberController {
     private UserService userService;
 
     @GetMapping("/signup")
-    public String signup(MemberFormDTO memberFormDTO){
+    public String signup(){
         return "signup_form";
     }
 
@@ -29,5 +29,10 @@ public class MemberController {
     public String signup(MemberDTO memberDTO){
        userService.create(memberDTO);
         return "signup_form";
+    }
+
+    @GetMapping("/complete_signup")
+    public String completeSignup(){
+        return "complete_signup";
     }
 }
