@@ -25,12 +25,22 @@ public class MemberController {
         return "signup_form";
     }
 
+    @GetMapping("signup_before")
+    public String signupBefore(){
+        return "signup_form_before";
+    }
+
+    @GetMapping("default")
+    public String default_a(){
+        return "default";
+    }
+    /*
     @PostMapping("/signup")
     public String signup(MemberDTO memberDTO){
        userService.create(memberDTO);
-        return "signup_form";
+        return "signup_form_before";
     }
-
+    */
     @GetMapping("/complete_signup")
     public String completeSignup(){
         return "complete_signup";
