@@ -12,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @RequiredArgsConstructor
 @Controller
@@ -20,10 +21,12 @@ public class MemberController {
     @Autowired
     private UserService userService;
 
+    /*
     @GetMapping("/signup")
     public String signup(){
         return "signup_form";
     }
+    */
 
     @GetMapping("signup_before")
     public String signupBefore(){
@@ -38,12 +41,12 @@ public class MemberController {
     @PostMapping("/signup") //formaction register member
     public String signup(MemberDTO memberDTO){
        userService.create(memberDTO);
-        return "complete_signup";
+        return "index"; //root
     }
 
     @GetMapping("/complete_signup")
     public String completeSignup(){
-        return "complete_signup";
+        return "/"; //일단 루트로 던지기
     }
 
     @GetMapping("/contact-page")
