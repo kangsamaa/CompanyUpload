@@ -34,15 +34,20 @@ public class MemberController {
     public String default_a(){
         return "default";
     }
-    /*
-    @PostMapping("/signup")
+
+    @PostMapping("/signup") //formaction register member
     public String signup(MemberDTO memberDTO){
        userService.create(memberDTO);
-        return "signup_form_before";
+        return "complete_signup";
     }
-    */
+
     @GetMapping("/complete_signup")
     public String completeSignup(){
         return "complete_signup";
+    }
+
+    @GetMapping("/contact-page")
+    public String contactPage(){
+        return "contact-page";
     }
 }
