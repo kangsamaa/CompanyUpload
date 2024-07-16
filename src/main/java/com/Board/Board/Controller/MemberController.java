@@ -38,7 +38,7 @@ public class MemberController {
         return "default";
     }
 
-    @PostMapping("/signup") //formaction register member
+    @PostMapping("signup") //formAction register member
     public String signup(MemberDTO memberDTO){
        userService.create(memberDTO);
         return "index"; //root
