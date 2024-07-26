@@ -328,11 +328,13 @@ html, body {
 
 /*section*/
 section {
+
 	position: relative;
 }
 
 section.bg-grey {
 	background-color: #f9f9f9;
+    justify-content: center
 }
 
 section.bg-reverse {
@@ -344,11 +346,11 @@ section.bg-overlay {
 }
 
 section.padding {
-	padding: 100px 0;
+	padding: 200px 0;
 }
 
 section#blog {
-	padding-bottom: 70px;
+	padding-top: 30%;
 }
 
 section .section-title {
@@ -361,8 +363,21 @@ section .section-lead {
 	margin-top: 15px;
 }
 
+section .section-input{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    gap: 10px;
+    width: 400px;
+    height: 100px;
+    margin-bottom : 200px;
+}
+
 section .section-body {
-	margin-top: 60px;
+	margin-top: 10px;
+	display: flex;
+    justify-content: center;
 }
 
 section.callout {
@@ -619,8 +634,6 @@ article.card .card-more i {
 /*contact*/
 form.contact .form-control {
     display: flex;
-    justify-content: center;
-    align-items: center;
 	margin: 0 auto;
 	height: 50px;
 	padding: 15px;

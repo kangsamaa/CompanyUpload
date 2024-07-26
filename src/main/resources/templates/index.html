@@ -6,7 +6,7 @@
 	<meta name="author" content="Kodinger">
 	<meta name="keyword" content="Kodinger, template, html5, css3, bootstrap4">
 	<meta name="description" content="HTML5 and CSS3 Template Based on Bootstrap 4">
-	<title>I'm Stisla</title>
+	<title>Welcom! Nenpi Calc</title>
 	<link rel="stylesheet" href="ionicons/css/ionicons.min.css">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="sweetalert/dist/sweetalert.css">
@@ -31,13 +31,16 @@
 					<a class="nav-link smooth-link" href="#hero">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link smooth-link" href="#features">Stisla's Features</a>
+					<a class="nav-link smooth-link" href="#calc">Calc</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link smooth-link" href="#blog">Blog</a>
+					<a class="nav-link smooth-link" href="#board">Board</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link smooth-link" href="#signup">Sign up</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link smooth-link" href="#map">Nenpi Map</a>
 				</li>
 			</ul>
 			<form class="form-inline">
@@ -55,7 +58,7 @@
 		</div>
 	</div>
 </section>
-
+<!--
 <section class="padding" id="features">
 	<div class="container">
 		<div class="row">
@@ -107,11 +110,21 @@
 		</div>
 	</div>
 </section>
-
+-->
 <section class="padding bg-grey" id="blog">
 	<div class="container">
-		<h2 class="section-title">We Blog Sometimes</h2>
-		<p class="section-lead text-muted">We wrote some articles about whatever was on our heads and most people liked it.</p>
+		<h2 class="section-title" id="calc">計算機</h2>
+		<p class="section-lead text-muted">毎日の燃費を管理して、出費を減らしましょ！</p>
+			<form class="calc"  th:action="complete_signup" method="post">
+				<div class="section-input">
+					<input type="text" name="carname" class="form-control" placeholder="車の名前を入力">
+					<input type="text" name="avgnenpi" class="form-control" placeholder="公式表にある車種の平均燃費を入力">
+					<input type="text" name="default" class="form-control" placeholder="ご本人の車の平均燃費を入力">
+					<button class="btn btn-primary" onclick="submit();">燃費登録</button>
+				</div>
+
+			</form>
+		<!--
 		<div class="section-body">
 			<div class="row col-spacing">
 				<div class="col-12 col-md-6 col-lg-4">
@@ -194,16 +207,16 @@
 				</div>
 			</div>
 		</div>
-
+-->
 		<div class="row align-items-center mt-5">
 			<div class="col-12 col-md-6">
-				<h2>Don't miss our article</h2>
-				<p class="text-muted">Just enter your email then we will send an email about the latest articles</p>
+				<h2>計算結果をメールに転送します。</h2>
+				<p class="text-muted">メールアドレスを入力してください。</p>
 			</div>
 			<div class="col-12 col-md-6">
 				<form class="subscribe" action="#">
-					<input type="email" name="email" class="form-control" placeholder="Your email">
-					<button class="btn btn-primary">Subscribe</button>
+					<input type="email" name="email" class="form-control" placeholder="メールアドレス入力">
+					<button class="btn btn-primary">Send Mail</button>
 				</form>
 			</div>
 		</div>
@@ -246,7 +259,7 @@
 		<h2 class="section-title text-center">会員登録</h2>
 		<p class="section-lead text-center text-muted">ID、E-mail、Passwordの三つだけを入力してください</p>
 		<div class="section-body">
-			<div class="row col-spacing">
+		<!--	<div class="row col-spacing"> -->
 				<div class="col-12 col-md-7">
 					<form class="contact row" id="contact-form"  method ="post" th:action="signup">
 						<div class="form-group col-6">
@@ -266,7 +279,7 @@
 						</div>
 					</form>
 				</div>
-			</div>
+			<!--</div> -->
 		</div>
 	</div>
 </section>

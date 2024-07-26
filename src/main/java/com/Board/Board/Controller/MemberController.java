@@ -38,6 +38,7 @@ public class MemberController {
         return "default";
     }
 
+
     @PostMapping("signup") //formAction register member
     public String signup(MemberDTO memberDTO){
        userService.create(memberDTO);
@@ -47,6 +48,11 @@ public class MemberController {
     @GetMapping("/complete_signup")
     public String completeSignup(){
         return "/"; //일단 루트로 던지기
+    }
+
+    @PostMapping("complete_signup")
+    public String postCompleteSignup(){
+        return "complete_signup";
     }
 
     @GetMapping("/contact-page")
