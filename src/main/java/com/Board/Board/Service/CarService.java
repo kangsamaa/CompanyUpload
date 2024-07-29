@@ -24,5 +24,5 @@ public class CarService {
 
         carInfoRepositoryRepository.save(car);
     }
-    
+
 }
